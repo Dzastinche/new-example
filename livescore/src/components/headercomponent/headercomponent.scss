@@ -1,0 +1,49 @@
+.header{
+    margin-top: 1rem;   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    height: 100px;
+    font-size: 1rem;
+    overflow: hidden;
+    background-color: var(--color-sport-primary);
+    & > h1{
+        color: silver;
+    }
+        &-logoside{
+            display: flex;
+            align-items: center;
+            height: inherit;
+            
+            &-logo{
+            border-radius: 50%;
+            margin-left: 50px;
+            width: 200px;
+            -webkit-box-shadow: 4px 13px 48px 14px #D4FFA4; 
+box-shadow: 4px 13px 48px 14px #D4FFA4;
+        }
+    }
+    &-anotherside{
+        width: 26%;
+        display: flex;
+    }
+
+}
+
+  @media screen and (max-width:630px){
+    .header{
+        &-logoside{
+            &-logo{
+                margin-left: 2.5rem;
+                width: 150px;
+            }
+        }
+    }
+  };
+  @media screen and (max-width:850px){
+    .header{
+      padding: 0 0!important;
+      
+    }
+}

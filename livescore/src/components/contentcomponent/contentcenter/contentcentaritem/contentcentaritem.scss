@@ -1,0 +1,49 @@
+.MatchRow_matchRowWrapper__1BtJ3:hover {
+    color: #fdfdfd;
+    background: #333;
+}
+.MatchRowTime_root__3E8cU {
+    flex: 0 0 45px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #aaa;
+    padding: 4px 0 0;
+    font-size: 11px;
+    justify-content: space-between;
+    height: 40px;
+}
+.MatchRowTime_isCentered__1Gp8h {
+    justify-content: center;
+}
+.MatchRowTime_time__2Fkd2 {
+    display: flex;
+    justify-content: center;
+}
+.MatchRow_away__1kkKT, .MatchRow_home__pkUrB {
+    display: flex;
+    flex: 1 1;
+    letter-spacing: .41px;
+    position: relative;
+}
+
+.MatchRow_score__34WYX {
+    color: #fdfdfd;
+    display: flex;
+    flex: 0 0 30px;
+    flex-direction: column;
+    font-weight: 700;
+    position: relative;
+    margin-right: 13px;
+}
+.MatchRow_favoriteButtonWrapper__3_0DG {
+    width: 37px;
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+}
+.MatchRow_matchFavoriteButton__2JtRz {
+    cursor: pointer;
+    margin: 0 0 0 5px;
+    padding: 0;
+}

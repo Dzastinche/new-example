@@ -1,0 +1,15 @@
+.button{
+    background-color:transparent;
+    padding: 2px;
+    display: flex;
+    color: silver;
+    font-size: 2rem;
+    &:hover{
+        background-color: var(--color-sport-tertiary);
+        color:silver;
+        text-decoration:none
+    }
+}
+a {
+    text-decoration: none;
+}

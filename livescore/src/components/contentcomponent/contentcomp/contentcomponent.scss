@@ -1,0 +1,7 @@
+.container__mainInner {
+    padding-top: 10px;
+    position: relative;
+    order: 1;
+    display: grid;
+    grid-template: " myMenu liveTable bannerZone " minmax(calc(100vh - 125px),1fr)/150px 660px auto;}
+    

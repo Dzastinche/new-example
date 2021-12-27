@@ -1,0 +1,16 @@
+.leftMenu {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    background-color: var(--color-background-8);
+    border-bottom: 1px solid var(--color-border-1);
+}
+.myTeamsWrapper {
+    margin-bottom: 10px;
+    min-height: 53px;
+    background: var(--color-background-8);}
+.container__myMenu {
+    background-color: var(--color-background-1);
+    margin-right: 10px;
+    grid-area: myMenu;
+}
