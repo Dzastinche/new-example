@@ -7,7 +7,7 @@ const HeaderLinks=()=>{
     return(
         <div className='menuTop'>
          <div className='menuTop__group menuTop__content'>
-             <HeaderLinksButton>idemo</HeaderLinksButton>
+             <HeaderLinksButton></HeaderLinksButton>
          </div>
             
         </div> 

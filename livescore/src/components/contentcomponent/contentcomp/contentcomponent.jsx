@@ -5,11 +5,15 @@ import ContentCenter from '../contentcenter/contentcenter'
 import {useSelector,useDispatch} from 'react-redux'
 import Loader from '../../loadercomponent/loader'
 import Rightside from '../contentright/contentright'
+import { Routes,Route} from 'react-router-dom'
+import { favGames } from '../../../redux/reducers/reducers'
 
 
 const Content = ()=>{
     let utakmice=useSelector((state) => state.todaygames);
     let loaded=useSelector((state)=> state.todaygames.loading);
+    let favorite=useSelector((state)=>state.favGames)
+    console.log(favorite)
     useEffect(()=>{
         },[utakmice,loaded])
         if (loaded==false){
@@ -17,7 +21,10 @@ const Content = ()=>{
                 <div className='container__mainInner'>
                                         <Sidebar></Sidebar>
                 <div className='container__liveTableWrapper sport_page'>
-                    <ContentCenter utakmice={utakmice.utakmice[0].matches}></ContentCenter>
+                    <Routes>
+                        <Route path="/" exact element={<ContentCenter utakmice={utakmice.utakmice[0].matches}></ContentCenter>}></Route>
+                        <Route path='/favorite' element={<ContentCenter utakmice={favorite}></ContentCenter>}></Route>
+                    </Routes>
                 </div>
                 <Rightside></Rightside>
             </div>

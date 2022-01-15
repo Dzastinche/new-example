@@ -5,6 +5,10 @@ import './headerlinksbutton.scss'
 export const HeaderLinksButton = ({name,...props})=>{
     console.log(props,'dss')
     return(
-        <Link to='/home' className='menuTop__item menuTop__text'>link</Link>
+        <>
+        <Link to='/' className='menuTop__item menuTop__text'>Sve utakmice</Link>
+        <Link to='/favorite' className='menuTop__item menuTop__text'>Odabrane</Link></>
+        
+        
     )
 }

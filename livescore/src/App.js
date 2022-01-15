@@ -2,7 +2,7 @@ import {Header} from './components/headercomponent/headercomponent'
 import './App.scss';
 import React,{Component} from 'react'
 import HeaderLinks from './components/headerlinks/headerlinks'
-import {Route,Routes} from 'react-router-dom'
+import {Link, Route,Routes} from 'react-router-dom'
 import Content from './components/contentcomponent/contentcomp/contentcomponent.jsx'
 import store from './redux/store'
 import { fetchGames,News,Newsfor,practice,start} from './redux/actions/actions';
@@ -28,10 +28,9 @@ class App extends Component{
         <Header></Header>
         <HeaderLinks ></HeaderLinks>
         <Content></Content>
-        <Routes>
-        <Route path='/' component={()=>{<HeaderLinks sports={this.state.fudbal}></HeaderLinks>},console.log(this.state)}></Route>
 
-        </Routes>
+        
+
     </div>
       
     )
