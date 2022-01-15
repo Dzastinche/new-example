@@ -1,18 +1,26 @@
 import FootballGame from './contentcentaritem.jsx'
-export const League=({competition,id})=>{
+import './contentcentarleague.scss'
+export const League=({id,allcomp,comp})=>{
+    console.log(id,allcomp)
     return(
-    competition.map((game)=>{
-            console.log(game.competition.id==id)
-            if(game.competition.id==id)
-            { return <FootballGame key={game.id} game={game} nesto={id}></FootballGame> }
-            else{
-                return null
-            }
-              
-               }
+            <div className='nesto'>
+                <div className='event__header top'>
+                    <img className='flag' src={comp.area.ensignUrl}></img>
+                <h1>{comp.name}</h1>
+                    <img className='flag' src={comp.area.ensignUrl}></img>
+                </div>
+                    {allcomp.map((game)=>{
+                        if(game.competition.id==id)
+                            { return (
+                                <FootballGame key={game.id} game={game} nesto={id}></FootballGame>
+                            )
+                            }
+                        else{
+                            return null}
+                        }
 
-                
-            
-        )
+                )}
+            </div>
+    
     )
 }

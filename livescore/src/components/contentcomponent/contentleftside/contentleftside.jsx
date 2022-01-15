@@ -7,7 +7,8 @@ class Sidebar extends React.Component{
     }
     render(){
         return(
-            <div className='container__myMenu menu country-list my-leagues leftMenu myTeamsWrapper'>
+            <div className='container__myMenu menu country-list my-leagues leftMenu myTeamsWrapper side'>
+                <h1>leva</h1>
                 <LefSideItem></LefSideItem>
             </div>
         )

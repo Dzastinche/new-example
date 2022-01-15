@@ -16,12 +16,23 @@ switch(action.type){
     default: return state;
 }}
     
-export const favGames=(state=neki,action)=>{
+export const favGames=(state=[],action)=>{
     switch(action.type){
-        case 'add_this_gamee':
-            return [...state,40]
+        case 'add_favorite':
+            {
+                let favgames=[...state];
+                if( favgames.includes(action.payload))
+                {return favgames}
+                else{return [...favgames,action.payload]}
+            }  
         default: return state
     }
-    
     }
-export const Combined=combineReducers({todaygames:games,favGames:favGames})
+    export const news=(state=[],action)=>{
+        switch(action.type){
+            case 'add-news':
+                {return [...state,action.payload]}
+                default: return state
+        }
+    }
+export const Combined=combineReducers({todaygames:games,favGames:favGames,novosti:news})

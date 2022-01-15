@@ -1,5 +1,5 @@
 import { year,mjesec,dan } from "./date"
-import { useDispatch } from "react-redux"
+
 
 export const fillArray=(games)=>{
     return {
@@ -24,6 +24,22 @@ export const fetchGames=()=>{
           
     }
 }
+export const addnews=(news)=>{
+    return{
+        type:'add-news',
+        payload:[news]
+    }
+}
+export const Newsfor=()=>{
+    return(dispatch)=>{
+        const proxy='https://shrouded-temple-39982.herokuapp.com/';
+        fetch(`${proxy}https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=c8ca03f400434aa49ac99176e8f8eb03`)
+        .then(el=>el.json())
+        .then(ele=>{console.log(ele);dispatch(addnews(ele.articles))})
+    }
+
+
+}
 export const start=()=>{
     return{
         type:'start'
@@ -39,5 +55,11 @@ export const practice=()=>{
     return{
         type:'add_this_gamee'
         
+    }
+}
+export const addgametofavorite=(game)=>{
+    return{
+        type:"add_favorite",
+        payload:game,
     }
 }

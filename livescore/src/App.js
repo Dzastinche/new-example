@@ -2,10 +2,10 @@ import {Header} from './components/headercomponent/headercomponent'
 import './App.scss';
 import React,{Component} from 'react'
 import HeaderLinks from './components/headerlinks/headerlinks'
-import {Route} from 'react-router-dom'
+import {Route,Routes} from 'react-router-dom'
 import Content from './components/contentcomponent/contentcomp/contentcomponent.jsx'
 import store from './redux/store'
-import { fetchGames,practice,start} from './redux/actions/actions';
+import { fetchGames,News,Newsfor,practice,start} from './redux/actions/actions';
 window.addEventListener('load',()=>{
 store.dispatch(start)
 })
@@ -17,6 +17,8 @@ class App extends Component{
   }
   componentDidMount(){
     store.dispatch(fetchGames())
+    store.dispatch(Newsfor())
+    
     
   }
   render(){
@@ -26,8 +28,10 @@ class App extends Component{
         <Header></Header>
         <HeaderLinks ></HeaderLinks>
         <Content></Content>
-        <button style={{fontSize: 30,width:50,height:50}} onClick={()=>{store.dispatch(practice());console.log(store.getState())}}>klikniii</button>
+        <Routes>
         <Route path='/' component={()=>{<HeaderLinks sports={this.state.fudbal}></HeaderLinks>},console.log(this.state)}></Route>
+
+        </Routes>
     </div>
       
     )

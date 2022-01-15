@@ -2,14 +2,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@1,200&display=swap');
 @import 'bootstrap/dist/css/bootstrap.min.css';
 body {
-  font-size:0.625rem;
+  height: 100vh;
+  font-size:11px;
   margin: 0;
   font-family: 'Nunito Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  & > #root > .all > *{
-    padding: 0 100px;
+  & > #root  {
+    height: 100%;
+    & > .all{
+      height: 100%;
+    }
   }
+
 }
 
 code {
@@ -17,3 +22,18 @@ code {
 }
 
 html { font-size: 62.5%; }
+
+@media screen and (max-width:859px){
+  body > #root > .all *{
+    padding: 0 0px;
+  }
+  .container__mainInner{
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width:562px){
+  .container__mainInner{
+    margin: 0 0;
+  }
+}

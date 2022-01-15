@@ -1,0 +1,15 @@
+.stuck {
+    background: var(--color-background-8);
+    right: 0;
+    width: 210px;
+    overflow-y: scroll;
+    position: absolute;
+}
+.news-img{
+    width: 190px;
+}
+@media screen and (max-width:702px){
+    .stuck{
+        display: none;
+    }
+}

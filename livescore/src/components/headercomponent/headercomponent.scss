@@ -36,7 +36,7 @@ box-shadow: 4px 13px 48px 14px #D4FFA4;
         &-logoside{
             &-logo{
                 margin-left: 2.5rem;
-                width: 150px;
+                width: 100px;
             }
         }
     }
@@ -46,4 +46,7 @@ box-shadow: 4px 13px 48px 14px #D4FFA4;
       padding: 0 0!important;
       
     }
+}
+.header-anotherside{
+    margin-right: 20px;
 }

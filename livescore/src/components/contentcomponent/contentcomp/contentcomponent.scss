@@ -1,7 +1,45 @@
 .container__mainInner {
+    height: 80%;
+    width: 100%;
     padding-top: 10px;
     position: relative;
     order: 1;
     display: grid;
-    grid-template: " myMenu liveTable bannerZone " minmax(calc(100vh - 125px),1fr)/150px 660px auto;}
-    
+    margin: 0 0;
+    }
+    @media screen and (min-width:850px){
+        .container__mainInner{
+            grid-template-columns: 2fr 6fr 2fr;
+        }
+    }
+    @media screen and (max-width:1049px){
+        .container__mainInner{
+            grid-template-columns: 2fr 5fr 2fr;
+        }
+    }
+    @media screen and (max-width:922px){
+        .container__mainInner{
+            grid-template-columns: 1fr 5fr 2fr;
+        }
+    }
+    @media screen and (max-width:872px){
+        .container__mainInner{
+            grid-template-columns:5fr 2fr;
+        }
+    }
+    @media screen and (max-width:720px){
+        .container__mainInner{
+            grid-template-columns:4fr 2fr
+        }
+    }
+    @media screen and (max-width:702px){
+        .container__mainInner{
+            grid-template-columns:1fr
+        }
+    }
+
+.myTeamsWrapper {
+    margin-bottom: 10px;
+    min-height: 53px;
+    background: var(--color-background-8);}
+

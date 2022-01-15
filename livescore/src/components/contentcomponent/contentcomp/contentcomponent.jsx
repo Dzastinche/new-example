@@ -4,23 +4,22 @@ import Sidebar from '../contentleftside/contentleftside'
 import ContentCenter from '../contentcenter/contentcenter'
 import {useSelector,useDispatch} from 'react-redux'
 import Loader from '../../loadercomponent/loader'
-import { finished } from '../../../redux/actions/actions'
+import Rightside from '../contentright/contentright'
 
 
 const Content = ()=>{
     let utakmice=useSelector((state) => state.todaygames);
     let loaded=useSelector((state)=> state.todaygames.loading);
     useEffect(()=>{
-        console.log(utakmice,loaded)
-    
         },[utakmice,loaded])
         if (loaded==false){
             return(
                 <div className='container__mainInner'>
+                                        <Sidebar></Sidebar>
                 <div className='container__liveTableWrapper sport_page'>
-                    <Sidebar></Sidebar>
                     <ContentCenter utakmice={utakmice.utakmice[0].matches}></ContentCenter>
                 </div>
+                <Rightside></Rightside>
             </div>
             )
         }
