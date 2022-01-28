@@ -9,6 +9,13 @@
     .NewsPage{
         padding: 20px !important;
     }
+    .MatchRow_home__pkUrB,
+    .MatchRow_away__1kkKT{
+        flex-shrink:1
+    }
+    .MatchRow_score__34WYX{
+        text-align: center;
+    }
 }
 @media screen and (max-width: 299px){
     .new{

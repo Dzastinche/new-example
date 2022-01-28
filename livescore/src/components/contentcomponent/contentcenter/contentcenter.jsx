@@ -21,7 +21,6 @@ const ContentCenter=({utakmice,fav})=>{
                     
             }
         })}
-        <div className='selected'>eee</div>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import { year,mjesec,dan } from "./date"
 
-
+console.log(year,mjesec,dan())
 export const fillArray=(games)=>{
     return {
         type:'games',
@@ -13,7 +13,7 @@ export const fetchGames=()=>{
     //fetch data
 
             const proxy='https://shrouded-temple-39982.herokuapp.com/';
-            fetch(`${proxy}http://api.football-data.org/v3/matches?dateFrom=${year}-${mjesec}-${dan()}&dateTo=${year}-${mjesec}-${dan(1)}`,
+            fetch(`${proxy}http://api.football-data.org/v3/matches?dateFrom=${year}-${mjesec}-${dan()}&dateTo=${year}-${mjesec}-${dan(10)}`,
             {
               "method": "GET",
                 "headers": {
