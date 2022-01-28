@@ -1,6 +1,6 @@
 import FootballGame from './contentcentaritem.jsx'
 import './contentcentarleague.scss'
-export const League=({id,allcomp,comp})=>{
+export const League=({id,allcomp,comp,fav})=>{
     console.log(id,allcomp)
     return(
             <div className='nesto'>
@@ -12,7 +12,7 @@ export const League=({id,allcomp,comp})=>{
                     {allcomp.map((game)=>{
                         if(game.competition.id==id)
                             { return (
-                                <FootballGame key={game.id} game={game} nesto={id}></FootballGame>
+                                <FootballGame fav={fav} key={game.id} game={game} nesto={id}></FootballGame>
                             )
                             }
                         else{

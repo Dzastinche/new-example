@@ -3,6 +3,7 @@ import './contentright.scss'
 import Modals from './modal'
 const Rightside=()=>{
     const novosti=useSelector(state=>state.novosti[0][0])
+    console.log(novosti)
     let count=5
     return(
                     <div className="stuck">

@@ -1,0 +1,20 @@
+@media screen and (max-width: 509px){
+    .MatchRow_teams__3Bqbv{
+        width: 100%;
+        min-width: 100px;
+    }
+    .header-logoside-logo{
+        margin-left: 0.5rem;
+    }
+    .NewsPage{
+        padding: 20px !important;
+    }
+}
+@media screen and (max-width: 299px){
+    .new{
+        max-width: 240px;
+    }
+    .NewsPage{
+        overflow: hidden;
+    }
+}

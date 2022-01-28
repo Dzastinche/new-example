@@ -1,12 +1,22 @@
 import { useSelector,useDispatch } from "react-redux"
-import {addgametofavorite} from '../../../../../redux/actions/actions'
+import {addgametofavorite, deleteFavGame} from '../../../../../redux/actions/actions'
 
-export const Addfavorite=({spec})=>{
+export const Addfavorite=({spec,fav})=>{
     let stateforfavorite=useSelector((state)=> state.favGames)
     let dispatch=useDispatch()
-    return (
-        <button onClick={()=>{dispatch(addgametofavorite(spec))}} className='FavoriteButton_favorite__3KKUK MatchRow_matchFavoriteButton__2JtRz btn btn-success'>
-                {console.log(stateforfavorite)}+
+    if(fav==true){
+        return (
+            <button onClick={()=>{dispatch(deleteFavGame(spec))}} className='FavoriteButton_favorite__3KKUK MatchRow_matchFavoriteButton__2JtRz btn btn-danger'>
+                    -
             </button>
-    )
+        )
+    }
+    else{
+        return (
+            <button onClick={()=>{dispatch(addgametofavorite(spec))}} className='FavoriteButton_favorite__3KKUK MatchRow_matchFavoriteButton__2JtRz btn btn-success'>
+                    +
+            </button>
+        )
+    }
+    
 }

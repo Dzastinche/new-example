@@ -1,7 +1,8 @@
 import './contentcenter.scss'
 import {League} from './contentcentaritem/contentcentarleague'
 
-const ContentCenter=({utakmice})=>{
+
+const ContentCenter=({utakmice,fav})=>{
     let champ=[]
     return (
         
@@ -14,7 +15,7 @@ const ContentCenter=({utakmice})=>{
                     champ.push(utakmica.competition.id)
                     console.log('champ',champ,utakmice,utakmica)
                     return(
-                        <League key={utakmica.competition.id} id={utakmica.competition.id} comp={utakmica.competition} allcomp={utakmice}></League>
+                        <League fav={fav} key={utakmica.competition.id} id={utakmica.competition.id} comp={utakmica.competition} allcomp={utakmice}></League>
                         
                     )
                     

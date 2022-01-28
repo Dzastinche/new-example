@@ -7,7 +7,10 @@ export const HeaderLinksButton = ({name,...props})=>{
     return(
         <>
         <Link to='/' className='menuTop__item menuTop__text'>Sve utakmice</Link>
-        <Link to='/favorite' className='menuTop__item menuTop__text'>Odabrane</Link></>
+        <Link to='/favorite' className='menuTop__item menuTop__text'>Odabrane</Link>
+        <Link to='/news' className='menuTop__item menuTop__text'>Novosti</Link>
+        </>
+        
         
         
     )

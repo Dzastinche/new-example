@@ -1,6 +1,6 @@
 import "./contentcentaritem.scss"
 import {Addfavorite} from "./addfavorite/addfavorite" 
-const FootballGame=({game})=>{
+const FootballGame=({game,fav})=>{
     console.log(game.id)
     return  (
         <div className='MatchRow_matchRowWrapper__1BtJ3'>
@@ -14,7 +14,7 @@ const FootballGame=({game})=>{
         </div>
         
         <div className='MatchRow_favoriteButtonWrapper__3_0DG'>
-            <Addfavorite spec={game}></Addfavorite>
+            <Addfavorite fav={fav} spec={game}></Addfavorite>
         </div>
 
     </div>

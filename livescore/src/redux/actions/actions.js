@@ -35,7 +35,7 @@ export const Newsfor=()=>{
         const proxy='https://shrouded-temple-39982.herokuapp.com/';
         fetch(`${proxy}https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=c8ca03f400434aa49ac99176e8f8eb03`)
         .then(el=>el.json())
-        .then(ele=>{console.log(ele);dispatch(addnews(ele.articles))})
+        .then(ele=>{dispatch(addnews(ele.articles));dispatch(finishedNews())})
     }
 
 
@@ -61,5 +61,16 @@ export const addgametofavorite=(game)=>{
     return{
         type:"add_favorite",
         payload:game,
+    }
+}
+export const finishedNews=()=>{
+    return{
+        type:'finished-news'
+    }
+}
+export const deleteFavGame=(id)=>{
+    return{
+        type:'delete-game',
+        payload:id
     }
 }

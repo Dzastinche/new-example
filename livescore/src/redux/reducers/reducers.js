@@ -24,14 +24,19 @@ export const favGames=(state=[],action)=>{
                 if( favgames.includes(action.payload))
                 {return favgames}
                 else{return [...favgames,action.payload]}
-            }  
-        default: return state
-    }
-    }
+            }
+        case 'delete-game':{
+            let deleted=state.filter(el=> el!== action.payload)
+            return deleted
+        }
+            break
+        default: return state}}
+        
     export const news=(state=[],action)=>{
         switch(action.type){
             case 'add-news':
                 {return [...state,action.payload]}
+                break  
                 default: return state
         }
     }
