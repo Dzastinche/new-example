@@ -1,10 +1,11 @@
-.leftMenu__item {
-    position: relative;
+.leftMenu__item{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    padding-right: 6px;
-    min-height: 25px;
-    box-sizing: border-box;
+    flex-direction: column;
+}
+.sideitems{
+    display: flex;
+    flex-direction: column;
+    &-header{
+        display: flex;
+    }
 }

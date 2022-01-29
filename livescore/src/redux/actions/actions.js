@@ -13,7 +13,7 @@ export const fetchGames=()=>{
     //fetch data
 
             const proxy='https://shrouded-temple-39982.herokuapp.com/';
-            fetch(`${proxy}http://api.football-data.org/v3/matches?dateFrom=${year}-${mjesec}-${dan()}&dateTo=${year}-${mjesec}-${dan(10)}`,
+            fetch(`${proxy}http://api.football-data.org/v3/matches?dateFrom=${year}-${mjesec}-${dan()}&dateTo=${year}-${mjesec}-${dan(1)}`,
             {
               "method": "GET",
                 "headers": {
