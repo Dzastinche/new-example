@@ -33,7 +33,12 @@ export const addnews=(news)=>{
 export const Newsfor=()=>{
     return(dispatch)=>{
         const proxy='https://shrouded-temple-39982.herokuapp.com/';
-        fetch(`${proxy}https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=c8ca03f400434aa49ac99176e8f8eb03`)
+        fetch(`${proxy}https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=c8ca03f400434aa49ac99176e8f8eb03`,
+        {
+            "method": "GET",
+              "headers": {
+              "X-Api-Key": "c8ca03f400434aa49ac99176e8f8eb03",
+            }})
         .then(el=>el.json())
         .then(ele=>{dispatch(addnews(ele.articles));dispatch(finishedNews())})
     }
