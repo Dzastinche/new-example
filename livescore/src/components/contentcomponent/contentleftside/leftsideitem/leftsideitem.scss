@@ -9,3 +9,21 @@
         display: flex;
     }
 }
+.teams-ressult{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--bs-gray-400);
+    padding: 0 10px;
+    & > .teams{
+        display: flex;
+        flex-direction: column;
+    }
+    & > .ressult {
+        display: flex;
+        align-self: center;
+        flex-direction: column;
+    }
+    &:not(:last-child){
+        margin-bottom: 10px;
+    }
+}

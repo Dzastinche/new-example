@@ -1,5 +1,6 @@
 import { useState } from "react"
 import './leftsideitem.scss'
+import Check from "./fft"
 export const LefSideItem=({sideitem,games})=>{
     const [hidden,show]=useState(true)
     console.log(sideitem,games)
@@ -12,7 +13,17 @@ export const LefSideItem=({sideitem,games})=>{
             <div className="sideitems">
             {games.map(ele=>{
                 return(
-                <p>{`${ele.homeTeam.name}vs${ele.awayTeam.name}`}</p>
+                    <div className="teams-ressult">
+                         <div className="teams">
+                            <div>{ele.homeTeam.name}</div>
+                            <div>{ele.awayTeam.name}</div></div>
+                        <div className="ressult">
+                            {Check(ele)}
+                        
+                        </div>
+                    </div>
+                   
+                
             )})}
             </div>
             

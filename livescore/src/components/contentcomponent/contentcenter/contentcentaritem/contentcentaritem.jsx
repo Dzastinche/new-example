@@ -1,5 +1,6 @@
 import "./contentcentaritem.scss"
 import {Addfavorite} from "./addfavorite/addfavorite" 
+import Check from "../../contentleftside/leftsideitem/fft"
 const FootballGame=({game,fav})=>{
     console.log(game.id)
     return  (
@@ -9,7 +10,7 @@ const FootballGame=({game,fav})=>{
         </span>
         <div className='MatchRow_teams__3Bqbv'>
             <div className='MatchRow_home__pkUrB'>{game.homeTeam.name}</div>
-            <div className='MatchRow_score__34WYX'>{game.score.fullTime.homeTeam} vs {game.score.fullTime.awayTeam}</div>
+            <div className='MatchRow_score__34WYX'>{Check(game)}</div>
             <div className='MatchRow_away__1kkKT'>{game.awayTeam.name}</div>
         </div>
         
