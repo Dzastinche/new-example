@@ -32,7 +32,7 @@ export const addnews=(news)=>{
 }
 export const Newsfor=()=>{
     return(dispatch)=>{;
-        fetch(`/give`)
+        fetch(`https://newsapi.org/v2/top-headlines?country=us&category=sports&apiKey=c8ca03f400434aa49ac99176e8f8eb03`)
         .then(el=>el.json())
         .then(ele=>{dispatch(addnews(ele.articles));dispatch(finishedNews());console.log(ele)})
     }

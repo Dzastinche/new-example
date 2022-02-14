@@ -1,7 +1,6 @@
 import FootballGame from './contentcentaritem.jsx'
 import './contentcentarleague.scss'
 export const League=({id,allcomp,comp,fav})=>{
-    console.log(id,allcomp)
     return(
             <div className='nesto'>
                 <div className='event__header top'>

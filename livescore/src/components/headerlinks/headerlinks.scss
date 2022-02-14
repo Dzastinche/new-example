@@ -25,29 +25,14 @@
         display: grid;
         grid-template-columns: repeat(2,auto) max-content;
         align-items: center;
-        padding: 0 10px 0 0;
+        padding: 0 15px;
         user-select: none;
         color: var(--color-white);
         position: relative;
         box-sizing: border-box;
 }
-.menuTop__item:after {
-    content: attr(data-sport-count);
-    transition: opacity .25s;
-    z-index: 1;
-    background-color: #000;
-    opacity: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font-size: 9px;
-    height: 18px;
-    border-radius: 50%;
-    min-width: 18px;
-    right: 0;
-    margin-left: 7px;
-}
+
+
 .menuTop__text {
     white-space: nowrap;
     text-transform: uppercase;

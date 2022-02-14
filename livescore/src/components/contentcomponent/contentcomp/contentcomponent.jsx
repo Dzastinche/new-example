@@ -11,7 +11,7 @@ const Content = ()=>{
     let loaded=useSelector((state)=> state.todaygames.loading);
     let favorite=useSelector((state)=>state.favGames)
     useEffect(()=>{
-        },[utakmice,loaded])
+        },[utakmice.loaded])
         if (loaded==false){
             return(
                 

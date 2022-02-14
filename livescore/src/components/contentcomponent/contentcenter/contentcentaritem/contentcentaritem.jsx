@@ -1,8 +1,8 @@
 import "./contentcentaritem.scss"
 import {Addfavorite} from "./addfavorite/addfavorite" 
 import Check from "../../contentleftside/leftsideitem/fft"
+import { useEffect } from "react"
 const FootballGame=({game,fav})=>{
-    console.log(game.id)
     return  (
         <div className='MatchRow_matchRowWrapper__1BtJ3'>
         <span className='MatchRowTime_root__3E8cU MatchRowTime_isCentered__1Gp8h'>
